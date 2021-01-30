@@ -33,7 +33,7 @@ Now start the containers by using the Remote - Containers extensions.
 <details>
   <summary>Change web server root</summary>
 
-### Default the webroot is the project root
+#### Default the webroot is the project root
 
 If the web server should not point to the root of your project.
 Change the following in your `.devcontainer/Dockerfile`:  
