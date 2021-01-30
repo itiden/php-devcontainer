@@ -2,12 +2,13 @@ version: '3'
 
 services: 
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        PHP_INI_MEMORY_LIMIT: 1g
-        PHP_INI_ERROR_REPORTING: E_ALL
+    image: thecodingmachine/php:7.4-v4-apache-node14
+    environment:
+      APACHE_DOCUMENT_ROOT: /var/www/html
+      APACHE_EXTENSIONS: headers
+      PHP_EXTENSIONS: imagick gd
+      PHP_INI_MEMORY_LIMIT: 1g
+      PHP_INI_ERROR_REPORTING: E_ALL
 
     volumes:
       - ..:/var/www/html

@@ -13,7 +13,7 @@ But can probably be used as a base for your production environment too with some
 
 ## Installation
 
-In the root of your Wordpress site, run `npx degit itiden/wp-devcontainer/.devcontainer`.  
+In the root of your Wordpress site, run `npx degit itiden/wp-devcontainer/.devcontainer#main .devcontainer`.  
 This will copy the .devcontainer from this repo to your project.
 
 Change your database connection details in your local Wordpress site to:
@@ -36,8 +36,8 @@ Now start the containers by using the Remote - Containers extensions.
 #### Default the webroot is the project root
 
 If the web server should not point to the root of your project.
-Change the following in your `.devcontainer/Dockerfile`:  
- `ENV APACHE_DOCUMENT_ROOT=/var/www/html/<folder>`
+Change the following in your `.devcontainer/docker-compose.yml`:  
+ `APACHE_DOCUMENT_ROOT: /var/www/html/<folder>`
 
 </details>
 
@@ -47,7 +47,7 @@ Change the following in your `.devcontainer/Dockerfile`:
 #### Default PHP version is 7.4 and Node 14
 
 This setup uses the PHP Docker image from: [thecodingmachine/docker-images-php](https://github.com/thecodingmachine/docker-images-php).  
- Any config for PHP, Apache and Node can be change according to their setup.
+Any config for PHP, Apache and Node can be change according to their setup.
 
 Also version of PHP and Node can be changed by following their readme.
 
