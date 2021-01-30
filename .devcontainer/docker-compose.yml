@@ -1,0 +1,45 @@
+version: '3'
+
+services: 
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PHP_INI_MEMORY_LIMIT: 1g
+        PHP_INI_ERROR_REPORTING: E_ALL
+
+    volumes:
+      - ..:/var/www/html
+
+    ports:
+      - "8080:80"
+
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    restart: unless-stopped
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: wp
+      MYSQL_USER: wp
+      MYSQL_PASSWORD: wp
+
+    ports:
+      - "8081:3306"
+
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    environment: 
+      ADMINER_DEFAULT_SERVER: db
+      ADMINER_DESIGN: nette
+    ports:
+      - 8082:8080
+
+volumes:
+  mysql-data:
