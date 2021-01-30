@@ -1,4 +1,4 @@
-# Add a Docker devcontainer to your Wordpress project
+# Add a Docker Dev Container to your Wordpress project
 
 Runs your Wordpress site in a Docker container using [Dev containers](https://code.visualstudio.com/docs/remote/containers-tutorial).  
 No need to install PHP or Mysql on your computer.
