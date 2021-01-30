@@ -1,23 +1,13 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.154.2/containers/php-mariadb
-// Update the VARIANT arg in docker-compose.yml to pick a PHP version: 7, 7.3, 7.4 
 {
-	"name": "PHP & Mysql",
+	"name": "PHP and Mysql",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/var/www/html",
-	
-	// Set *default* container specific settings.json values on container create.
-	"settings": { 
-		"terminal.integrated.shell.linux": "/bin/bash",
-	},
-
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"felixfbecker.php-debug",
 		"felixfbecker.php-intellisense"
 	],
-
 	// Add commands that should run after creation
 	//"postCreateCommand": "composer install && yarn install && yarn dev"
 }
