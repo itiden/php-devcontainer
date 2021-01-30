@@ -7,7 +7,8 @@ services:
       APACHE_DOCUMENT_ROOT: /var/www/html
       APACHE_EXTENSIONS: headers
       PHP_EXTENSIONS: imagick gd
-      PHP_INI_MEMORY_LIMIT: 1g
+      PHP_INI_MEMORY_LIMIT: 1024M
+      PHP_INI_POST_MAX_SIZE: 512M
       PHP_INI_ERROR_REPORTING: E_ALL
 
     volumes:
