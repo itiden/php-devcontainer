@@ -4,7 +4,7 @@ Runs your Wordpress site in a Docker container using [Dev containers](https://co
 No need to install PHP or Mysql on your computer.
 
 This setup is done to help setup your local development environment.  
-But can probably be used as a base for your production environment too with some modifications.
+But can probably be used as a base for your production environment too with some modifications (but that is currently not the intent of this repo).
 
 ## Prerequisites
 
