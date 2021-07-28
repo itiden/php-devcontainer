@@ -44,7 +44,7 @@ Change the following in your `.devcontainer/docker-compose.yml`:
 <details>
   <summary>Change PHP extensions, config and version</summary>
 
-#### Default PHP version is 7.4 and Node 14
+#### Default PHP version is 8.0 with Apache and Node 14
 
 This setup uses the PHP Docker image from: [thecodingmachine/docker-images-php](https://github.com/thecodingmachine/docker-images-php).  
 Any config for PHP, Apache and Node can be change according to their setup.
@@ -56,7 +56,7 @@ Also version of PHP and Node can be changed by following their readme.
 <details>
   <summary>Mysql version and access</summary>
 
-#### By default Mysql 5.7 is used.
+#### By default Mysql 8.0 is used.
 
 This can be changed in the `.devcontainer/docker-compose.yml` file:
 

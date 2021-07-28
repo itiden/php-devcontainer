@@ -2,7 +2,7 @@ version: '3'
 
 services: 
   app:
-    image: thecodingmachine/php:7.4-v4-apache-node14
+    image: thecodingmachine/php:8.0-v4-apache-node14
     environment:
       APACHE_DOCUMENT_ROOT: /var/www/html
       APACHE_EXTENSIONS: headers
@@ -21,7 +21,7 @@ services:
       - db
 
   db:
-    image: mysql:5.7
+    image: mysql:8.0
     restart: unless-stopped
     volumes:
       - mysql-data:/var/lib/mysql
