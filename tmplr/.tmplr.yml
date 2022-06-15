@@ -54,3 +54,4 @@ steps:
 
   - update: .devcontainer/devcontainer.json
   - update: .devcontainer/Dockerfile
+  - remove: .tmplr.yml
