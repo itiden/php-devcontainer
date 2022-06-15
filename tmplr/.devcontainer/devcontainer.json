@@ -2,12 +2,13 @@
 	"name": "PHP and Mysql",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
-	"workspaceFolder": "/var/www/html",
+	"workspaceFolder": "/home/wp/{{ tmplr.project_name }}",
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"felixfbecker.php-debug",
-		"felixfbecker.php-intellisense"
+	  "felixfbecker.php-debug",
+	  "felixfbecker.php-intellisense",
+	  "esbenp.prettier-vscode"
 	],
 	// Add commands that should run after creation
-	//"postCreateCommand": "composer install && yarn install && yarn dev"
-}
+	"postCreateCommand": "yarn && composer install"
+  }

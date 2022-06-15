@@ -1,0 +1,17 @@
+steps:
+  - read: project_name
+    prompt: What is the name of the project?
+    default:
+      from: path.rootdir
+  - update: .devcontainer/devcontainer.json
+  - read: php_version
+    prompt: Select PHP version
+    choices:
+      - 8.1
+      - 8.0
+      - 7.4
+      - 7.3
+      - 7.2
+      - 7.1
+      - 7.0
+  - update: .devcontainer/Dockerfile
