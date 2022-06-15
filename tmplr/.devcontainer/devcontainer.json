@@ -10,5 +10,5 @@
 	  "esbenp.prettier-vscode"
 	],
 	// Add commands that should run after creation
-	"postCreateCommand": "yarn && composer install"
+	"postCreateCommand": "{{ tmplr.post_create_command }}"
   }

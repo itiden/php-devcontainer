@@ -29,5 +29,14 @@ steps:
       - "16"
       - "14"
 
+  - read: post_create_command
+    prompt: Command to run after entering dev container
+    choices:
+      - "yarn && composer install"
+      - "npm install && composer install"
+      - ""
+      - Other:
+          prompt: Specify command ...
+
   - update: .devcontainer/devcontainer.json
   - update: .devcontainer/Dockerfile
