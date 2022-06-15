@@ -4,14 +4,14 @@ services:
   app:
     build: .
     volumes:
-      - ..:/home/wp/fractal
+      - ..:/home/wp/{{ tmplr.project_folder }}
     ports:
       - '8080:80'
     depends_on:
       - db
 
   db:
-    image: mysql/mysql-server:8.0
+    image: mysql/mysql-server:{{ tmplr.mysql_version }}
     restart: unless-stopped
     volumes:
       - mysql-data:/var/lib/mysql

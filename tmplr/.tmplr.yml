@@ -29,6 +29,13 @@ steps:
       - "16"
       - "14"
 
+  - read: mysql_version
+
+    prompt: Select MySQL version
+    choices:
+      - "8.0"
+      - "5.7"
+
   - read: post_create_command
     prompt: Command to run after entering dev container
     choices:
