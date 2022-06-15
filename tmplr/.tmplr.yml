@@ -21,6 +21,13 @@ steps:
       - "8.0"
       - "7.4"
 
+  - read: composer_version
+
+    prompt: Select Composer version
+    choices:
+      - "2"
+      - "1"
+
   - read: node_version
 
     prompt: Select Node version

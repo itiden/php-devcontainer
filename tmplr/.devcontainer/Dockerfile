@@ -20,6 +20,7 @@ RUN yarn set version stable
 RUN a2enmod rewrite
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+RUN composer self-update --{{ tmplr.composer_version }}
 
 ENV APACHE_DOCUMENT_ROOT /home/wp/{{ tmplr.project_folder }}{{ tmplr.web_root }}
 

@@ -27,6 +27,9 @@ Select web server root
 **php_version**  
 Select PHP version.
 
+**composer_version**  
+Select Composer version
+
 **node_version**  
 Select Node version.
 
