@@ -3,15 +3,23 @@ steps:
     prompt: What is the name of the project?
     default:
       from: path.rootdir
+
   - update: .devcontainer/devcontainer.json
+
   - read: php_version
+
     prompt: Select PHP version
     choices:
-      - 8.1
-      - 8.0
-      - 7.4
-      - 7.3
-      - 7.2
-      - 7.1
-      - 7.0
+      - "8.1"
+      - "8.0"
+      - "7.4"
+
+  - read: node_version
+
+    prompt: Select Node version
+    choices:
+      - "18"
+      - "16"
+      - "14"
+
   - update: .devcontainer/Dockerfile
