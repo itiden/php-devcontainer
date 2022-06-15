@@ -54,5 +54,5 @@ steps:
 
   - update: .devcontainer/devcontainer.json
   - update: .devcontainer/Dockerfile
-  - update: .devcontainer/docker-composer.yml
+  - update: .devcontainer/docker-compose.yml
   - remove: .tmplr.yml
