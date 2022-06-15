@@ -2,7 +2,7 @@
 	"name": "PHP and Mysql",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
-	"workspaceFolder": "/home/wp/{{ tmplr.project_name }}",
+	"workspaceFolder": "/home/wp/{{ tmplr.project_folder }}",
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 	  "felixfbecker.php-debug",

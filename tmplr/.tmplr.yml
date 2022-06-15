@@ -1,10 +1,17 @@
 steps:
-  - read: project_name
-    prompt: What is the name of the project?
+  - read: project_folder
+    prompt: Name the project folder in Docker
     default:
       from: path.rootdir
 
-  - update: .devcontainer/devcontainer.json
+  - read: web_root
+    prompt: Select web server root
+    choices:
+      - "/web"
+      - "/public"
+      - "/"
+      - Other:
+          prompt: Specify the folder name ...
 
   - read: php_version
 
@@ -22,4 +29,5 @@ steps:
       - "16"
       - "14"
 
+  - update: .devcontainer/devcontainer.json
   - update: .devcontainer/Dockerfile
