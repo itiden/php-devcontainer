@@ -11,7 +11,7 @@ services:
       - db
 
   db:
-    image: { { tmplr.database } }
+    image: {{ tmplr.database }}
     restart: unless-stopped
     volumes:
       - db-data:/var/lib/mysql
