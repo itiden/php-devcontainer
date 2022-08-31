@@ -1,7 +1,7 @@
-# Add a Docker Dev Container to your Wordpress project
+# Add a Docker Dev Container to your PHP/Wordpress project
 
-Runs your Wordpress site in a Docker container using [Dev containers](https://code.visualstudio.com/docs/remote/containers-tutorial).  
-No need to install PHP or Mysql on your computer.
+Runs your PHP/Wordpress site in a Docker container using [Dev containers](https://code.visualstudio.com/docs/remote/containers-tutorial).  
+No need to install PHP or database on your computer.
 
 This setup is done to help setup your local development environment.  
 But can probably be used as a base for your production environment too with some modifications (but that is currently not the intent of this repo).
@@ -13,7 +13,7 @@ But can probably be used as a base for your production environment too with some
 
 ## Installation
 
-In the root of your Wordpress site, run `npx tmplr itiden/wp-devcontainer/tmplr`.  
+In the root of your Wordpress site, run `npx tmplr itiden/php-devcontainer/tmplr`.  
 This will prompt you with some questions where you can setup:
 
 **project_folder**  
