@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) bcmath gd zip mysqli exif
+    && docker-php-ext-install -j$(nproc) bcmath gd zip mysqli exif pdo pdo_mysql
 
 RUN curl -sL https://deb.nodesource.com/setup_{{ tmplr.node_version }}.x -o nodesource_setup.sh
 RUN bash nodesource_setup.sh
