@@ -11,10 +11,10 @@ services:
       - db
 
   db:
-    image: mysql/mysql-server:{{ tmplr.mysql_version }}
+    image: { { tmplr.database } }
     restart: unless-stopped
     volumes:
-      - mysql-data:/var/lib/mysql
+      - db-data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: wp
@@ -33,4 +33,4 @@ services:
       - 8082:8080
 
 volumes:
-  mysql-data:
+  db-data:

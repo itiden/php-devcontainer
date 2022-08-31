@@ -7,9 +7,9 @@ steps:
   - read: web_root
     prompt: Select web server root
     choices:
-      - "/web"
-      - "/public"
-      - "/"
+      - '/web'
+      - '/public'
+      - '/'
       - Other:
           prompt: Specify the folder name ...
 
@@ -17,38 +17,38 @@ steps:
 
     prompt: Select PHP version
     choices:
-      - "8.1"
-      - "8.0"
-      - "7.4"
+      - '8.1'
+      - '8.0'
+      - '7.4'
 
   - read: composer_version
 
     prompt: Select Composer version
     choices:
-      - "2"
-      - "1"
+      - '2'
+      - '1'
 
   - read: node_version
 
     prompt: Select Node version
     choices:
-      - "18"
-      - "16"
-      - "14"
+      - '18'
+      - '16'
+      - '14'
 
-  - read: mysql_version
-
-    prompt: Select MySQL version
+  - read: database
+    prompt: Which database
     choices:
-      - "8.0"
-      - "5.7"
+      - 'mysql/mysql-server:8.0'
+      - 'mysql/mysql-server:5.7'
+      - 'mariadb:10'
 
   - read: post_create_command
     prompt: Command to run after entering dev container
     choices:
-      - "yarn && composer install"
-      - "npm install && composer install"
-      - ""
+      - 'yarn && composer install'
+      - 'npm install && composer install'
+      - ''
       - Other:
           prompt: Specify command ...
 
