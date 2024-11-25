@@ -50,16 +50,11 @@ steps:
       - Other:
           prompt: Specify command ...
 
-  - copy:
-      source: .devcontainer/devcontainer.json
-      destination: .devcontainer/devcontainer.json
+  - copy: .devcontainer/devcontainer.json
+    to: .devcontainer/devcontainer.json
 
-  - copy:
-      source: .devcontainer/Dockerfile
-      destination: .devcontainer/Dockerfile
+  - copy: .devcontainer/Dockerfile
+    to: .devcontainer/Dockerfile
 
-  - copy:
-      source: .devcontainer/docker-compose.yml
-      destination: .devcontainer/docker-compose.yml
-
-  - remove: .tmplr.yml
+  - copy: .devcontainer/docker-compose.yml
+    to: .devcontainer/docker-compose.yml
