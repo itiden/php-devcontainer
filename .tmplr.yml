@@ -51,10 +51,10 @@ steps:
           prompt: Specify command ...
 
   - copy: .devcontainer/devcontainer.json
-    to: .devcontainer/devcontainer.json
+    to: ../.devcontainer/devcontainer.json
 
   - copy: .devcontainer/Dockerfile
-    to: .devcontainer/Dockerfile
+    to: ../.devcontainer/Dockerfile
 
   - copy: .devcontainer/docker-compose.yml
-    to: .devcontainer/docker-compose.yml
+    to: ../.devcontainer/docker-compose.yml
