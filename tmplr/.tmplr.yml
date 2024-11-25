@@ -14,7 +14,6 @@ steps:
           prompt: Specify the folder name ...
 
   - read: php_version
-
     prompt: Select PHP version
     choices:
       - '8.4'
@@ -22,14 +21,12 @@ steps:
       - '8.2'
 
   - read: composer_version
-
     prompt: Select Composer version
     choices:
       - '2'
       - '1'
 
   - read: node_version
-
     prompt: Select Node version
     choices:
       - '22'
@@ -53,7 +50,16 @@ steps:
       - Other:
           prompt: Specify command ...
 
-  - update: .devcontainer/devcontainer.json
-  - update: .devcontainer/Dockerfile
-  - update: .devcontainer/docker-compose.yml
+  - copy:
+      source: .devcontainer/devcontainer.json
+      destination: .devcontainer/devcontainer.json
+
+  - copy:
+      source: .devcontainer/Dockerfile
+      destination: .devcontainer/Dockerfile
+
+  - copy:
+      source: .devcontainer/docker-compose.yml
+      destination: .devcontainer/docker-compose.yml
+
   - remove: .tmplr.yml
