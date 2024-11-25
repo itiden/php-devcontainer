@@ -44,7 +44,7 @@ steps:
   - read: post_create_command
     prompt: Command to run after entering dev container
     choices:
-      - 'yarn && composer install'
+      - 'yarn -y && composer install'
       - 'npm install && composer install'
       - ''
       - Other:
