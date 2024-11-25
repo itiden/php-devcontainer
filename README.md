@@ -13,7 +13,7 @@ But can probably be used as a base for your production environment too with some
 
 ## Installation
 
-In the root of your Wordpress site, run `npx tmplr use itiden/php-devcontainer/tmplr`.  
+In the root of your Wordpress site, run `npx tmplr use itiden/php-devcontainer`.  
 This will prompt you with some questions where you can setup:
 
 **project_folder**  
