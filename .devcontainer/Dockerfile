@@ -15,6 +15,8 @@ RUN bash nodesource_setup.sh
 RUN apt-get install nodejs
 RUN rm nodesource_setup.sh
 RUN corepack enable
+ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
+
 RUN a2enmod rewrite
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
