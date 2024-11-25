@@ -17,9 +17,9 @@ steps:
 
     prompt: Select PHP version
     choices:
-      - '8.1'
-      - '8.0'
-      - '7.4'
+      - '8.4'
+      - '8.3'
+      - '8.2'
 
   - read: composer_version
 
@@ -32,15 +32,16 @@ steps:
 
     prompt: Select Node version
     choices:
+      - '22'
+      - '20'
       - '18'
-      - '16'
-      - '14'
 
   - read: database
     prompt: Which database
     choices:
+      - 'mysql/mysql-server:8.4'
       - 'mysql/mysql-server:8.0'
-      - 'mysql/mysql-server:5.7'
+      - 'mariadb:11'
       - 'mariadb:10'
 
   - read: post_create_command
