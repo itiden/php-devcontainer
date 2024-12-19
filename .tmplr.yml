@@ -36,7 +36,6 @@ steps:
   - read: database
     prompt: Which database
     choices:
-      - 'mysql/mysql-server:8.4'
       - 'mysql/mysql-server:8.0'
       - 'mariadb:11'
       - 'mariadb:10'
